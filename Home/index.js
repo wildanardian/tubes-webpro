@@ -46,4 +46,24 @@ function toggleNotif(e) {
 
 document.addEventListener("click", toggleNotif);
 
+const photoInput = document.getElementById('photo');
+const previewImage = document.getElementById('preview');
+const photoLabel = document.getElementById('photo-label');
 
+photoInput.addEventListener('change', function() {
+    const file = photoInput.files[0];
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            previewImage.src = e.target.result;
+            previewImage.style.display = 'block';
+            photoLabel.style.display = 'none';
+        };
+
+        reader.readAsDataURL(file);
+    } else {
+        previewImage.style.display = 'none';
+        photoLabel.style.display = 'block';
+    }
+});

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<!-- Dropdown Profil link source : https://www.youtube.com/watch?v=ybXulmeilFM -->
+
+<body>
+    <header id="header">
+        <nav>
+            <h1 class="ms-4 fs-2 fw-bold"><a href="index.html" class="text-decoration-none text-dark">ReBook.</a></h1>
+            <ul>
+                <li><a href="index.html" class="active text-dark text-decoration-none">Home</a></li>
+                <li><a href="#" class="text-dark text-decoration-none">MyBookings</a></li>
+            </ul>
+            <div id="nav-right" class="d-flex border-start border-2 align-items-center" style="border-color: #D4D4D4; height: 40px;">
+                <img src="Util/notification.svg" class="notif-pict">
+                <img src="Util/user.png" alt="" srcset="" class="user-pict">
+            </div>
+
+            <div class="sub-menu-wrap shadow-lg" id="subMenu">
+                <div class="sub-menu bg-white" style="padding: 20px;">
+                    <div class="user-info d-flex align-items-center">
+                        <img src="Util/user.png" alt="" srcset="" style="width: 60px; margin-right: 10px; border-radius: 50%;">
+                        <h3 style="padding-top: 15px;">John Doe</h3>
+                    </div>
+                    <hr class="w-100" style="background-color: gray;">
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="Util/icon-user.png" alt="" style="width: 35px;">
+                        <p>Edit Profile</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="Util/Home.svg" alt="">
+                        <p>My Restaurant</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="Util/Logout.svg" alt="">
+                        <p>Logout</p>
+                        <span class="mt-1">></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="notification-wrap shadow-lg" id="notifMenu">
+                <div class="sub-menu bg-white" style="padding: 20px;">
+                    <div class="notif-info d-flex align-item-center" style="margin-left: 30px;">
+                        <h6 class="text-center">No Notification</h6>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <hr class="mt-0" style="padding: 1px;">
+    </header>
+
+    <div class="container mt-5">
+        <div class="shadow p-3 mb-5 bg-white rounded" style="height: 88%;">
+            <p class="text-center fw-bold" style=" font-size: 30px;">My Restaurant</p>
+            <hr class="mt-3" style="width: 99%">
+            <div class="row">
+                <!-- Left -->
+                <div class="col-md-7">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10">
+                        <label class="col align-content-center fw-bold">Restaurant Photo</label>
+                        <div class="position-relative">
+                            <div class="container border border-dark" style="width: 100%px; height: 400px;  border-radius: 8px;">
+                                <input type="file" id="photo" hidden>
+                                <label class="col align-self-center" for="photo" id="photoLabel">
+                                    <i class="fa-solid fa-square-plus fa-4x dark"></i>                            
+                                </label>
+                            </div>
+                            <img class="position-absolute top-0 start-0" id="preview" style="display: none; max-width: 100%; border-radius: 8px;" />
+                        </div>
+                    </div>
+                    <div class="col-md-1"></div>
+                
+                </div>
+                <!-- right -->
+                <div class="col-md-5">
+                    <div class="mb-3">
+                        <label for="nameRestaurant" class="form-label fw-bold">Name Restaurant</label>
+                        <input type="text" class="form-control border-dark" id="nameRestaurant" style="border-radius: 8px; height: 48px; width: 95%;" placeholder="Restaurant Name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="name" class="fw-bold">Description Restaurant</label>
+                        <textarea name="Description" id="" cols="28" rows="5" style="resize: none; border-radius: 8px; width: 95%; height: 145px;" placeholder="Restaurant Description"></textarea>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="name" class="fw-bold">Address Restaurant</label>
+                        <textarea name="Address" id="" cols="28" rows="5" style="resize: none; width: 95%; height: 145px; border-radius: 8px;" placeholder="Restaurant Address"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="name" class="fw-bold">Opening Day</label>
+                        <br>
+                        <div class="mb-2" style="display: inline-flex;">
+                            <select class="me-2" name="" id="" style="width: 130px; height: 30px; border-radius: 8px;">
+                                <option selected>Select Day</option>
+                                <option value="1">Monday</option>
+                                <option value="2">Tuesday</option>
+                                <option value="3">Wednesday</option>
+                                <option value="4">Thursday</option>
+                                <option value="5">Friday</option>
+                                <option value="6">Saturday</option>
+                                <option value="7">Sunday</option>
+                            </select>
+                        <label class="fw-bold">To</label>
+                            <select class="ms-2" name="" id="" style="width: 130px; height: 30px; border-radius: 8px;">
+                                <option selected>Select Day</option>
+                                <option value="1">Monday</option>
+                                <option value="2">Tuesday</option>
+                                <option value="3">Wednesday</option>
+                                <option value="4">Thursday</option>
+                                <option value="5">Friday</option>
+                                <option value="6">Saturday</option>
+                                <option value="7">Sunday</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="name" class="fw-bold">Opening Hour</label>
+                        <br>
+                        <div class="mb-2" style="display: inline-flex;">
+                            <select class="me-2" name="" id="" style="width: 130px; height: 30px; border-radius: 8px;">
+                                <option selected>Select Hour</option>
+                                <option value="1">00:00</option>
+                                <option value="2">01:00</option>
+                                <option value="3">02:00</option>
+                                <option value="4">03:00</option>
+                                <option value="5">04:00</option>
+                                <option value="6">05:00</option>
+                                <option value="7">06:00</option>
+                                <option value="8">07:00</option>
+                                <option value="9">08:00</option>
+                                <option value="10">09:00</option>
+                                <option value="11">10:00</option>
+                                <option value="12">11:00</option>
+                                <option value="13">12:00</option>
+                                <option value="14">13:00</option>
+                                <option value="15">14:00</option>
+                                <option value="16">15:00</option>
+                                <option value="17">16:00</option>
+                                <option value="18">17:00</option>
+                                <option value="19">18:00</option>
+                                <option value="20">19:00</option>
+                                <option value="21">20:00</option>
+                                <option value="22">21:00</option>
+                                <option value="23">22:00</option>
+                                <option value="24">23:00</option>
+                            </select>
+                        <label class="fw-bold">To</label>
+                            <select class="ms-2" name="" id="" style="width: 130px; height: 30px; border-radius: 8px;">
+                                <option selected>Select Hour</option>
+                                <option value="1">00:00</option>
+                                <option value="2">01:00</option>
+                                <option value="3">02:00</option>
+                                <option value="4">03:00</option>
+                                <option value="5">04:00</option>
+                                <option value="6">05:00</option>
+                                <option value="7">06:00</option>
+                                <option value="8">07:00</option>
+                                <option value="9">08:00</option>
+                                <option value="10">09:00</option>
+                                <option value="11">10:00</option>
+                                <option value="12">11:00</option>
+                                <option value="13">12:00</option>
+                                <option value="14">13:00</option>
+                                <option value="15">14:00</option>
+                                <option value="16">15:00</option>
+                                <option value="17">16:00</option>
+                                <option value="18">17:00</option>
+                                <option value="19">18:00</option>
+                                <option value="20">19:00</option>
+                                <option value="21">20:00</option>
+                                <option value="22">21:00</option>
+                                <option value="23">22:00</option>
+                                <option value="24">23:00</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="numRest" class="form-label fw-bold">Contact Restaurant (Whatsapp)</label>
+                        <input type="number" class="form-control border-dark" id="numRest" style="border-radius: 8px; height: 48px; width: 95%;" placeholder="Contact Whatsapp">
+                    </div>
+                </div>
+
+                <hr class="mt-3" style="width: 99%">
+            
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-success " style="width: 15%;">
+                        <i class="fa-solid fa-plus" style="color: #ffffff;"></i>
+                        Add Restaurant
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="d-flex align-items-center justify-content-center flex-column border-top" style="border-color: #D4D4D4;">
+        <h1 class="ms-4 fs-2 fw-bold">ReBook.</h1>
+        <p>copyright 2023 | all rights reserved</p>
+    </footer>
+
+<script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>ReBook.</title>
+</head>
+
+<!-- Dropdown Profil link source : https://www.youtube.com/watch?v=ybXulmeilFM -->
+
+<body>
+    <header id="header">
+        <nav>
+            <h1 class="ms-4 fs-2 fw-bold"><a href="index.html" class="text-decoration-none text-dark">ReBook.</a></h1>
+            <ul>
+                <li><a href="index.html" class="text-dark text-decoration-none">Home</a></li>
+                <li><a href="#" class="text-dark text-decoration-none">MyBookings</a></li>
+            </ul>
+            <div id="nav-right" class="d-flex border-start border-2 align-items-center"
+                style="border-color: #D4D4D4; height: 40px;">
+                <img src="Util/notification.svg" class="notif-pict">
+                <img src="Util/user.png" alt="" srcset="" class="user-pict">
+            </div>
+
+            <div class="sub-menu-wrap shadow-lg" id="subMenu">
+                <div class="sub-menu bg-white" style="padding: 20px;">
+                    <div class="user-info d-flex align-items-center">
+                        <img src="Util/user.png" alt="" srcset=""
+                            style="width: 60px; margin-right: 10px; border-radius: 50%;">
+                        <h3 style="padding-top: 15px;">John Doe</h3>
+                    </div>
+                    <hr class="w-100" style="background-color: gray;">
+
+                    <a href="#" class="sub-menu-link">
+                        <img src="Util/icon-user.png" alt="" style="width: 35px;">
+                        <p>Edit Profile</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="Util/Home.svg" alt="">
+                        <p>My Restaurant</p>
+                        <span>></span>
+                    </a>
+                    <a href="#" class="sub-menu-link">
+                        <img src="Util/Logout.svg" alt="">
+                        <p>Logout</p>
+                        <span class="mt-1">></span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="notification-wrap shadow-lg" id="notifMenu">
+                <div class="sub-menu bg-white" style="padding: 20px;">
+                    <div class="notif-info d-flex align-item-center" style="margin-left: 30px;">
+                        <h6 class="text-center">No Notification</h6>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <hr class="mt-0" style="padding: 1px;">
+    </header>
+
+    <div class="mt-5" style="margin: 0 64px">
+        <div class="row gap-4 gap-lg-0">
+            <div class="col-12 col-lg-5">
+                <img class="rounded-3" src="Util/detail.png" alt="" width="100%">
+            </div>
+            <div class="col-12 col-lg-7 px-lg-5">
+                <div>
+                    <h4 class="fw-bold fs-2">The Exquisite</h4>
+                    <p class="text-sm text-muted" style="text-align: justify;">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel optio porro consectetur
+                        accusantium ex. Maxime ipsum pariatur recusandae inventore? Labore, animi explicabo
+                        exercitationem eligendi quam, nulla adipisci eveniet veniam minima sapiente tenetur quos, odio
+                        sequi voluptatum iste voluptate. Enim quis voluptates quia necessitatibus quasi voluptate. Et
+                        praesentium molestiae fugiat ea! Optio voluptatem quidem corrupti dolor voluptate repellat
+                        placeat perferendis pariatur cumque quo laboriosam ut architecto earum mollitia, modi provident
+                        voluptas quasi, dicta quas commodi soluta velit! Aut aspernatur voluptate ab repudiandae saepe
+                        deleniti vitae exercitationem atque! Quod id quidem dignissimos, earum suscipit, magnam deleniti
+                        nemo officia blanditiis quis voluptate necessitatibus soluta quo? Iste eaque ipsa repudiandae
+                        voluptatibus sapiente, dolor aliquam perspiciatis, blanditiis incidunt explicabo eius velit
+                        reiciendis quis. Doloribus, ipsa!
+                    </p>
+                </div>
+
+                <hr>
+
+                <div class="mb-4">
+                    <h5 class="fw-bold mb-3">Schedule</h5>
+
+                    <div class="row mb-3">
+                        <div class="col">
+                            <input type="checkbox" class="btn-check-day" id="btn-check-1" autocomplete="off" hidden>
+                            <label class="btn btn-outline-secondary w-100 btn-day" for="btn-check-1">Senin</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" class="btn-check-day" id="btn-check-2" autocomplete="off" hidden>
+                            <label class="btn btn-outline-secondary w-100 btn-day" for="btn-check-2">Selasa</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" class="btn-check-day" id="btn-check-3" autocomplete="off" hidden>
+                            <label class="btn btn-outline-secondary w-100 btn-day" for="btn-check-3">Rabu</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" class="btn-check-day" id="btn-check-4" autocomplete="off" hidden>
+                            <label class="btn btn-outline-secondary w-100 btn-day" for="btn-check-4">Kamis</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" class="btn-check-day" id="btn-check-5" autocomplete="off" hidden>
+                            <label class="btn btn-outline-secondary w-100 btn-day" for="btn-check-5">Jumat</label>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col">
+                            <input type="checkbox" class="btn-check" id="btn-check-pagi" autocomplete="off">
+                            <label class="btn btn-outline-secondary w-100" for="btn-check-pagi">Pagi</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" class="btn-check" id="btn-check-siang" autocomplete="off">
+                            <label class="btn btn-outline-secondary w-100" for="btn-check-siang">Siang</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" class="btn-check" id="btn-check-malam" autocomplete="off">
+                            <label class="btn btn-outline-secondary w-100" for="btn-check-malam">Malam</label>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col">
+                            <input type="checkbox" class="btn-check" id="btn-check-2-seat" autocomplete="off">
+                            <label class="btn btn-outline-secondary w-100" for="btn-check-2-seat">2 Seat</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" class="btn-check" id="btn-check-family-seat" autocomplete="off">
+                            <label class="btn btn-outline-secondary w-100" for="btn-check-family-seat">Family
+                                Seat</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-lg w-100">Book Now</button>
+
+                <hr class="mt-5">
+
+                <div class="mb-3">
+                    <h5 class="fw-bold mb-3">Reviews</h5>
+
+                    <div class="card shadow p-4">
+                        <h5 class="fw-bold">Jane Doe</h5>
+                        <p class="text-muted mb-3">
+                            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum."
+                        </p>
+                        ⭐️⭐️⭐️⭐️⭐️ (5)
+                    </div>
+                </div>
+
+                <div class="container bg-body-tertiary border border-dark-subtle rounded-3 mt-5 pt-3 pb-3">
+                    <form>
+                        <h5 class="fw-bold mb-3">Add Your Review</h5>
+                        <div class="rating d-flex justify-content-center gap-3 mb-3">
+                            <span class="star fa-regular fa-star" data-value="1"></span>
+                            <span class="star fa-regular fa-star" data-value="2"></span>
+                            <span class="star fa-regular fa-star" data-value="3"></span>
+                            <span class="star fa-regular fa-star" data-value="4"></span>
+                            <span class="star fa-regular fa-star" data-value="5"></span>
+                        </div>
+                        <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                                style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Describe your experience</label>
+                            <div class="d-flex justify-content-end">
+                                <button class="btn btn-primary btn-lg mt-3" type="submit">Add Review</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer class="d-flex align-items-center justify-content-center flex-column border-top"
+            style="border-color: #D4D4D4;">
+            <h1 class="ms-4 fs-2 fw-bold">ReBook.</h1>
+            <p>copyright 2023 | all rights reserved</p>
+        </footer>
+
+        <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+        <script src="detail.js"></script>
+</body>
+
+</html>
